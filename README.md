@@ -43,16 +43,22 @@ This shader was tailored specifically to enhance the appearance of game objects 
 5. Supporting Materials (Diagram)
 
 Vertex Input (Position, Normal)
+
      ↓
 Transform Normal to Object Space
+
      ↓
 Calculate Light Direction
+
      ↓
 Compute Diffuse Reflection (Lambert's Law)
+
      ↓
 Add Ambient Lighting
+
      ↓
 Apply User-Defined Color (_Color)
+
      ↓
 Output Vertex Color and Clip-Space Position
 
