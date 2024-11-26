@@ -41,6 +41,7 @@ The shader falls back to Unity’s standard "Diffuse" shader if not supported by
 This shader was tailored specifically to enhance the appearance of game objects by adding believable lighting which blends naturally into the scene. Furthermore, it can provide excellent lighting for the various trash objects located around the game area.
 
 5. Supporting Materials (Diagram)
+
 Vertex Input (Position, Normal)
      ↓
 Transform Normal to Object Space
@@ -55,7 +56,7 @@ Apply User-Defined Color (_Color)
      ↓
 Output Vertex Color and Clip-Space Position
 
-6. Why This Implementation Stands Out Compared to class or lab examples
+7. Why This Implementation Stands Out Compared to class or lab examples
 Custom Normal Transformation: The shader explicitly normalizes and transforms normals to object space for precision, which may not have been a focus in simpler examples.
 Ambient and Diffuse Combination: Unlike basic shaders, this shader balances multiple lighting components.
 User Customization: The _Color property provides artistic flexibility, which is often omitted in standard examples.
