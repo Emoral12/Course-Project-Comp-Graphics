@@ -42,27 +42,23 @@ This shader was tailored specifically to enhance the appearance of game objects 
 
 5. Supporting Materials (Diagram)
 
-> Vertex Input (Position, Normal)
-
+```
+Vertex Input (Position, Normal)
      ↓
 Transform Normal to Object Space
-
      ↓
 Calculate Light Direction
-
      ↓
 Compute Diffuse Reflection (Lambert's Law)
-
      ↓
 Add Ambient Lighting
-
      ↓
 Apply User-Defined Color (_Color)
-
      ↓
 Output Vertex Color and Clip-Space Position
+```
 
-7. Why This Implementation Stands Out Compared to class or lab examples
+6. Why This Implementation Stands Out Compared to class or lab examples
 Custom Normal Transformation: The shader explicitly normalizes and transforms normals to object space for precision, which may not have been a focus in simpler examples.
 Ambient and Diffuse Combination: Unlike basic shaders, this shader balances multiple lighting components.
 User Customization: The _Color property provides artistic flexibility, which is often omitted in standard examples.
@@ -110,7 +106,10 @@ If the shader is unsupported, it falls back to Unity's standard "Diffuse" shader
 4. Sales Pitch and Scene Benefits
 This shader plays a vital role in creating a gritty, immersive environment for the mutant rat invasion game. With the help of bump mapping two key textures are made more realistic and gritty, the brick walls surrounding the junkyard and the rat fur. With the help of bump mapping one can alter and modify the bumps of a normal map to accentuate key or important aspects of textures, such as the individual fur and hairs of the rats or make the individual bricks of a brick wall stand out.
 
+
 5. Supporting Materials (Graph)
+
+```
 Input UV Coordinates (Diffuse, Bump)
      ↓
 Fetch Diffuse Texture Color (tex2D)
@@ -120,6 +119,7 @@ Fetch and Unpack Normal Map (UnpackNormal)
 Modify Normal with Bump Slider (_mySlider)
      ↓
 Output Albedo and Modified Normal for Lighting Calculations
+```
 
 6. Why This Implementation Stands OutCompared to class or lab work
 Dynamic Control: The _mySlider property enables real-time adjustment of bump intensity, offering versatility that was not emphasized in standard examples.
@@ -182,6 +182,8 @@ If the shader is unsupported, it falls back to Unity’s standard "Diffuse" shad
 This shader adds visual interest and immersion to your scene by combining transparency and outline effects in a single material. It can be used creatively to highlight key elements in your game, making them more noticeable while maintaining a realistic glass-like effect. It specifically was implemetned to create unique and vibrant health pickup items, these being alcohol bottles the player will ifnd located around the game area, rather than the simplistic use of basic 3D shapes for hitpoint pickups. Through the use of outline shaders, players can note the game objects aren't simple decorations but important game objects that can help them. Furthermore, the glass appearance of bottles will add a hint of realism, instead of the bottle pickups being plain solid colors they will resemble actual beer bottles.
 
 5. Supporting Materials (Diagram)
+
+```
 Input: Object Vertices and Normals
     ↓
 Outline Pass:
@@ -193,6 +195,7 @@ Glass Pass:
         Fetch Diffuse and Bump Map Textures
         Apply Normal Mapping to Displace Texture Coordinates
         Blend Scene Reflection with Object Texture (with transparency)
+```
 
 6. Why This Implementation Stands Out Compared to class or lab work
 Dual Pass System: The shader combines two distinct effects (outline and glass) in a single shader, a technique that is more advanced than typical shaders seen in introductory material.
@@ -247,12 +250,15 @@ Easy Integration into Game Environments: Given that your game is set in a post-a
 Efficient Performance: Since this shader is straightforward, it is highly efficient and should perform well even when applied to large areas of concrete surfaces.
 
 5. Supporting Materials (Diagram)
+
+```
 Input: Object's UV Coordinates
     ↓
 Texture Sample: tex2D(_myTex, IN.uv_myTex)
     ↓
 Albedo Color Calculation: 
     (Texture Color * _myRange) -> Output to Surface
+```
    
 6. Why This Implementation Stands Out Compared to class or lab work:
 
@@ -305,6 +311,8 @@ The blended result is assigned to the Albedo, defining the surface's diffuse col
 This shader allows for otherwise static textures and objects to act and behave in a visually dynamic way that makes the scene feel more alive. It is used for the game to enhance the appearance of a scraped and salvaged TV, making an otherwise mundane quadrilateral object a dynamic and interesting game object.
 
 5. Supporting Materials
+
+```
 Input: Object's UV Coordinates + Scroll Speeds
     ↓
 Texture Sampling:
@@ -315,6 +323,7 @@ Blending: Combine Primary and Secondary Textures
     (Primary RGB + Secondary RGB) / 2
     ↓
 Output: Albedo
+```
 
 6. Why This Implementation Stands Out Compared to class or lab work
 Introduction of Motion: This shader goes beyond static textures by dynamically animating them, adding life to game surfaces.
@@ -362,6 +371,8 @@ Combines the ramp-based lighting result with the surface's base color (_Color), 
 The stylized and cartoony appearance of a toon shader (once implemented to a game object) will enhance the appearance of objects and accentatue the goofy and outlandish game premise. Furthermore, it is utilized for the tails of the giant rat enemies, which allows for players to spot the otherwise dark and covert critters with ease (as the vibrant toon pink of their tail will pop out in the otherwise dull andcool colors of the junkyard).
 
 5. Supporting Materials (Diagram)
+
+```
 Input: Normal Vector, Light Direction
     ↓
 Lighting Calculation:
@@ -375,6 +386,7 @@ Final Shading:
     - Multiply Ramp Color with _Color
     ↓
 Output: Toon-Shaded Albedo
+```
 
 6. Why This Implementation Stands Out Compared to class or lab work:
 Custom Lighting Integration: Implements a custom lighting model (LightingToonRamp), showcasing how lighting models can be tailored to achieve specific artistic effects.
@@ -428,6 +440,8 @@ Environmental Props: Apply to non-interactive background elements like walls or 
 Dynamic Lighting Demonstrations: Use for objects under dynamic light sources to showcase smooth, consistent shading.
 
 5. Supporting Materials
+
+```
 Vertex Stage: 
     Input: Object's Vertex and Normal
         ↓
@@ -447,6 +461,7 @@ Fragment Stage:
         - Combine diffuse term with base color and light color
         ↓
     Output: Final Surface Color
+```
 
 6. Why This Implementation Stands Out Compared to class or lab work
 Manual Lighting Calculations: Unlike pre-built Unity surface shaders, this implementation calculates Lambert lighting from scratch, demonstrating the core concepts behind diffuse reflection.
@@ -502,6 +517,8 @@ Dynamic Adjustments: The _Contribution parameter allows smooth transitions betwe
 Performance Optimization: The LUT-based method is computationally efficient compared to real-time color adjustment methods, making it suitable for high-performance gameplay.
 
 5. Supporting Materials
+
+```
 Input: Scene Texture (_MainTex) and Look-Up Texture (_LUT)
     ↓
 Fragment Shader:
@@ -513,6 +530,7 @@ Fragment Shader:
     - Blend Colors: lerp(originalColor, gradedColor, _Contribution)
     ↓
 Output: Final Graded Color
+```
 
 6. Why This Implementation Stands Out Compared to class or lab work
 Custom Color Mapping: This shader introduces LUT-based grading, a professional technique not typically covered in basic lessons.
