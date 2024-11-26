@@ -1,7 +1,32 @@
 # Course-Project-Comp-Graphics
 Course Project for Intro to Computer Graphics 40144
 
-Game Premise: Junkyard Defense is a 3D first-person shooter where you play as a crazy hobo living in a junkyard known as New York City. Inside of New York City, lies a large junkyard full of various trash heaps and scrap. However, the filthy and rough exterior of the junkyard does not deter our player character, who has made his home and base of operations insde the dirty and vast junkyard, staying away form the world's troubles by locking themselves away from the world withing the safe concrete walls of the junkyard. However, a threat approaches the junkyard, now you must defend your home and private property from a terrible invasion of giant rats roaming the streets of New York City. It is up to you, the player, to stop the rats from killing you for them to seize your beautiful junk-filled home.
+## Game Premise
+Junkyard Defense is a 3D first-person shooter where you play as a crazy hobo living in a junkyard known as New York City. Inside of New York City, lies a large junkyard full of various trash heaps and scrap. However, the filthy and rough exterior of the junkyard does not deter our player character, who has made his home and base of operations insde the dirty and vast junkyard, staying away form the world's troubles by locking themselves away from the world withing the safe concrete walls of the junkyard. However, a threat approaches the junkyard, now you must defend your home and private property from a terrible invasion of giant rats roaming the streets of New York City. It is up to you, the player, to stop the rats from killing you for them to seize your beautiful junk-filled home.
+
+## What was Improved
+The game now counts with a fully functioning menu system, allowing the player to see a controls menu (not able to change controls only how to learn them) and allowing multiple playthroughs/attempts; this was doone to allow greater player freedom and interactability while also allowing for multiple playthroughs without having to restart and reopen the game constantly. 
+
+The game area and level design has also been upgraded to a large and more intricately decorated layout rather than the single corridor of the previous game iteration. This change was implemetned due to the clunky and cumbersome movement of the original game iteration, as in the original level layout (off a single wide corridor) it was rrather easy for the rat enemies to cram around the player of mess with player-level collisions that lead to clipping into walls or out of the level zone.
+
+Another implement added into the game is health pickups that allow players to regain hit points once attacked by rat enemies, this was due to the original game iteration failing to provide players with any second chances or sustainability when damaged even once.
+
+Lastly, UI implementation was added to allow players to know their total kills and current hit point count, this is to prevent recklessness and allow stakes to be present rather than a simple unknowable fate to be given to players.
+
+## AI Disclaimer
+The use of ChatGPT was in fact done for this project. This was for the creation of the shader "Custom/GlassWithOutline", which originally was the shader "GlassOutline". Both shader scripts are in the Unity release and project files, as such it can be examined what was done differently and what was changed.
+
+## 3D Models Disclaimer
+There are assets in this game that were created by other individuals and people who are not myself. To avoid any plagiarzing and issues, they shall be credited here. The trashbag game asset is a 3D model found in Sketchfab, created by user "alexdelker". This model was used for the express purpose of populating the game zone and utilizes the specular lighting shader. This game asset is not of my own making and was grabbed form the Internet due to my desire to work on shaders primarily an dmy inability to create 3D modelsof my own. Link to his Sketchfab page: https://sketchfab.com/3d-models/day-183-garbage-46e7a742c00f4b6285abc347bc3ba217 
+
+A second disclaimer, many of the game models used in this final project release were carried over from Assignment 1, as such the disclaimer is made here that they were created by my previous teammate, who now has left the Intro to Computer Graphics course. The following assetswere made and designed by Discord user delta0100. and are not of my own creation: rat_killer.jpg (main menu background), bottle model, R-30B-K gun model, rat model, matress model, cigpack model, rusted_barrel model. i do ot claim ownership of these assets as they were originally made for Assignment 1 by my teammate. I have received express permission to utilize his 3D models by him through Discord. If required, I shall provide the screenshots of the conversation if asked upon.
+
+## List of Shaders, Texturing, and Visuals Effects
+Shaders: AmbientLighting (lighting model shader), AmbientLightingWithOutline (modified lighting model shader that utilizes outline visual effect), bump mapping (texture mapping shader used for game textures that require or benefit from a 3d bump feel), Concrete (simple mapping texture for conrete, utilizes bump mapping shader's principles), LambertLighting (now defunct shader which utilized Lambertian model of lighting, exchanged for next shader), LambertLightingTwo (modified version of LambertLighting shader, more accurate Lambertian model formulas and principles, as such was kept for final release), SpecularLighting (shader which uses Blinn-Phong methods of lgihting), ToonShader (shader which utilizes toon bump logic to generate cartoonish appearance in game objects), ToonShader_v2 (defunct shader which combined metallic and toon passes, not used in final release as final release follows a scrapyard, having objects that are too shiny and new-looking in luster would generate clashing thematic appearances).
+
+Texturing: used a handful of textures form online or hand-made. Used texture for concrete shader, TextureScroll effect, glass effect. All textures have their corresponding (if at all needed) normal map.
+
+Visual Effects: glass shader (utilized for green glass bottle pickups), outline shader (used and combined with glass shader for health pickups, originally intended to be used alongside rat enemies but implementation of two passes messed and altered UV_Wrapping around textures), Color Correction (implemented to make appearance of game seem colder in coloration and hue).
 
 ## Written Explanation for Shader "Custom/AmbientLighting"
 1. Overview of the Shader
