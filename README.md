@@ -42,7 +42,7 @@ This shader was tailored specifically to enhance the appearance of game objects 
 
 5. Supporting Materials (Diagram)
 
-Vertex Input (Position, Normal)
+> Vertex Input (Position, Normal)
 
      ↓
 Transform Normal to Object Space
