@@ -13,6 +13,7 @@ This shader provides a lightweight and customizable lighting solution that can b
 Realism: By incorporating ambient lighting, it mimics the soft, global illumination seen in real-world environments.
 Flexibility: The customizable _Color property allows for artistic control over the object's final appearance, aligning with specific scene aesthetics.
 Performance: By using basic calculations and avoiding heavy operations like specular highlights or shadows, it remains computationally inexpensive.
+
 3. Implementation Details
 The shader consists of vertex and fragment programs written in CG/HLSL. Each component contributes to its functionality:
 
