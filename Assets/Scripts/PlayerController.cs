@@ -57,12 +57,12 @@ public class PlayerController : MonoBehaviour
         hitPointsText.text = "HP: " + playerHitPoints.ToString();
         enemiesText.text = "Kills: " + enemiesDestroyed.ToString();
 
-        if (playerHitPoints > 0)
+        if (playerHitPoints > 0 || enemiesDestroyed < 35)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        
+
         if (playerHitPoints <= 0)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -175,6 +175,9 @@ public class PlayerController : MonoBehaviour
         if (enemiesDestroyed >= victoryEnemyCount)
         {
             SceneManager.LoadScene(victorySceneName); // Load victory screen
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
         }
     }
 
