@@ -1,6 +1,8 @@
 # Course-Project-Comp-Graphics
 Course Project for Intro to Computer Graphics 40144
 
+Presentation: https://docs.google.com/presentation/d/1WzZH2v67nW8rjkZUBuOINnZx8BzEln-Iw6oSdfsdSaI/edit?usp=sharing 
+
 ## Game Premise
 Junkyard Defense is a 3D first-person shooter where you play as a crazy hobo living in a junkyard known as New York City. Inside of New York City, lies a large junkyard full of various trash heaps and scrap. However, the filthy and rough exterior of the junkyard does not deter our player character, who has made his home and base of operations inside the dirty and vast junkyard, staying away form the world's troubles by locking themselves away from the world within the safe concrete walls of the junkyard. However, a threat approaches the junkyard, now you must defend your home and private property from a terrible invasion of giant rats roaming the streets of New York City. It is up to you, the player, to stop the rats from killing you for them to seize your beautiful junk-filled home.
 
